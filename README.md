@@ -1,1 +1,1 @@
-Admin https://alaminappbd-collab.github.io/Admin/
+adminhttps://alaminappbd-collab.github.io/Admin/
