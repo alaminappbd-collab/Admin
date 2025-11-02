@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Deposits - RAZA CASH</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="sidebar" id="sidebar">
+            <h1 class="logo">RAZA <span class="accent-text">CASH</span></h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html"><i class="fas fa-users"></i> Manage Users</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="deposits.html"><i class="fas fa-download"></i> Manage Deposits</a>
+                </li>
+                <li class="nav-item">
+                    <a href="withdraws.html"><i class="fas fa-upload"></i> Manage Withdraws</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plans.html"><i class="fas fa-box-open"></i> Manage Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+                </li>
+            </ul>
+            <button id="admin-logout-btn" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </nav>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Manage Deposits</h2>
+                <div class="header-right">
+                    <select id="lang-select">
+                        <option value="en">English</option>
+                        <option value="bn">বাংলা</option>
+                        <option value="hi">हिंदी</option>
+                    </select>
+                    <i class="fas fa-bars" id="menu-toggle"></i>
+                </div>
+            </header>
+            
+            <div class="content-body">
+                <div class="card">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="pending" data-lang-key="pending">Pending</button>
+                        <button class="tab-btn" data-tab="approved" data-lang-key="approved">Approved</button>
+                        <button class="tab-btn" data-tab="rejected" data-lang-key="rejected">Rejected</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th data-lang-key="date">Date</th>
+                                <th data-lang-key="user">User</th>
+                                <th data-lang-key="amount">Amount</th>
+                                <th data-lang-key="method">Method</th>
+                                <th data-lang-key="txnId">Txn ID</th>
+                                <th data-lang-key="status">Status</th>
+                                <th data-lang-key="actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="deposits-table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
